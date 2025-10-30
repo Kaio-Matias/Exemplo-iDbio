@@ -30,6 +30,13 @@
         {
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPageLogin = new System.Windows.Forms.TabPage();
+            this.lblLoginStatus = new System.Windows.Forms.Label();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.openUpdateFilebtn = new System.Windows.Forms.Button();
             this.fingerImage = new System.Windows.Forms.PictureBox();
@@ -43,6 +50,14 @@
             this.captureLog = new System.Windows.Forms.RichTextBox();
             this.ModelTextBox = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBoxCadastro = new System.Windows.Forms.GroupBox();
+            this.btnCadastrarApi = new System.Windows.Forms.Button();
+            this.btnCarregarLista = new System.Windows.Forms.Button();
+            this.txtFiltroNome = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.flpColaboradores = new System.Windows.Forms.FlowLayoutPanel();
+            this.IdentifyLog = new System.Windows.Forms.RichTextBox();
+            this.groupBoxDispositivo = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.enrollIDTextBox = new System.Windows.Forms.TextBox();
@@ -53,7 +68,6 @@
             this.readAllBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.iDsList = new System.Windows.Forms.ListView();
-            this.IdentifyLog = new System.Windows.Forms.RichTextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.btnConfigDefault = new System.Windows.Forms.Button();
             this.chkAutomatic = new System.Windows.Forms.CheckBox();
@@ -66,15 +80,19 @@
             this.minVarTrack = new System.Windows.Forms.TrackBar();
             this.updateFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1.SuspendLayout();
+            this.tabPageLogin.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fingerImage)).BeginInit();
             this.tabPage2.SuspendLayout();
+            this.groupBoxCadastro.SuspendLayout();
+            this.groupBoxDispositivo.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.minVarTrack)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
+            this.tabControl1.Controls.Add(this.tabPageLogin);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
@@ -84,6 +102,81 @@
             this.tabControl1.Size = new System.Drawing.Size(646, 578);
             this.tabControl1.TabIndex = 10;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.TabControl1_SelectedIndexChanged);
+            // 
+            // tabPageLogin
+            // 
+            this.tabPageLogin.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPageLogin.Controls.Add(this.lblLoginStatus);
+            this.tabPageLogin.Controls.Add(this.btnLogin);
+            this.tabPageLogin.Controls.Add(this.txtPassword);
+            this.tabPageLogin.Controls.Add(this.label11);
+            this.tabPageLogin.Controls.Add(this.txtUsername);
+            this.tabPageLogin.Controls.Add(this.label10);
+            this.tabPageLogin.Location = new System.Drawing.Point(4, 22);
+            this.tabPageLogin.Name = "tabPageLogin";
+            this.tabPageLogin.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageLogin.Size = new System.Drawing.Size(638, 552);
+            this.tabPageLogin.TabIndex = 3;
+            this.tabPageLogin.Text = "Login";
+            // 
+            // lblLoginStatus
+            // 
+            this.lblLoginStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoginStatus.ForeColor = System.Drawing.Color.Red;
+            this.lblLoginStatus.Location = new System.Drawing.Point(173, 290);
+            this.lblLoginStatus.Name = "lblLoginStatus";
+            this.lblLoginStatus.Size = new System.Drawing.Size(293, 23);
+            this.lblLoginStatus.TabIndex = 5;
+            this.lblLoginStatus.Text = "Desconectado";
+            this.lblLoginStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(254, 230);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(130, 40);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(232, 186);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(200, 26);
+            this.txtPassword.TabIndex = 3;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(170, 189);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 20);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Senha:";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(232, 150);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(200, 26);
+            this.txtUsername.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(170, 153);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(62, 20);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Usuário:";
             // 
             // tabPage1
             // 
@@ -220,58 +313,146 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.enrollIDTextBox);
-            this.tabPage2.Controls.Add(this.deleteAllBtn);
-            this.tabPage2.Controls.Add(this.identifyTextBox);
-            this.tabPage2.Controls.Add(this.IdentifyBtn);
-            this.tabPage2.Controls.Add(this.enrollBtn);
-            this.tabPage2.Controls.Add(this.readAllBtn);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.iDsList);
+            this.tabPage2.Controls.Add(this.groupBoxCadastro);
             this.tabPage2.Controls.Add(this.IdentifyLog);
+            this.tabPage2.Controls.Add(this.groupBoxDispositivo);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(638, 552);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Identification";
+            this.tabPage2.Text = "Cadastro e Identificação";
+            // 
+            // groupBoxCadastro
+            // 
+            this.groupBoxCadastro.Controls.Add(this.btnCadastrarApi);
+            this.groupBoxCadastro.Controls.Add(this.btnCarregarLista);
+            this.groupBoxCadastro.Controls.Add(this.txtFiltroNome);
+            this.groupBoxCadastro.Controls.Add(this.label12);
+            this.groupBoxCadastro.Controls.Add(this.flpColaboradores);
+            this.groupBoxCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxCadastro.Location = new System.Drawing.Point(152, 6);
+            this.groupBoxCadastro.Name = "groupBoxCadastro";
+            this.groupBoxCadastro.Size = new System.Drawing.Size(478, 386);
+            this.groupBoxCadastro.TabIndex = 27;
+            this.groupBoxCadastro.TabStop = false;
+            this.groupBoxCadastro.Text = "Cadastro de Biometria (API)";
+            // 
+            // btnCadastrarApi
+            // 
+            this.btnCadastrarApi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarApi.Location = new System.Drawing.Point(244, 332);
+            this.btnCadastrarApi.Name = "btnCadastrarApi";
+            this.btnCadastrarApi.Size = new System.Drawing.Size(228, 48);
+            this.btnCadastrarApi.TabIndex = 5;
+            this.btnCadastrarApi.Text = "Cadastrar Biometria";
+            this.btnCadastrarApi.UseVisualStyleBackColor = true;
+            this.btnCadastrarApi.Click += new System.EventHandler(this.btnCadastrarApi_Click);
+            // 
+            // btnCarregarLista
+            // 
+            this.btnCarregarLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCarregarLista.Location = new System.Drawing.Point(6, 332);
+            this.btnCarregarLista.Name = "btnCarregarLista";
+            this.btnCarregarLista.Size = new System.Drawing.Size(228, 48);
+            this.btnCarregarLista.TabIndex = 4;
+            this.btnCarregarLista.Text = "Carregar/Atualizar Lista";
+            this.btnCarregarLista.UseVisualStyleBackColor = true;
+            this.btnCarregarLista.Click += new System.EventHandler(this.btnCarregarLista_Click);
+            // 
+            // txtFiltroNome
+            // 
+            this.txtFiltroNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFiltroNome.Location = new System.Drawing.Point(60, 23);
+            this.txtFiltroNome.Name = "txtFiltroNome";
+            this.txtFiltroNome.Size = new System.Drawing.Size(412, 21);
+            this.txtFiltroNome.TabIndex = 2;
+            this.txtFiltroNome.TextChanged += new System.EventHandler(this.Filros_TextChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(14, 26);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(40, 15);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Filtrar:";
+            // 
+            // flpColaboradores
+            // 
+            this.flpColaboradores.AutoScroll = true;
+            this.flpColaboradores.BackColor = System.Drawing.Color.LightGray;
+            this.flpColaboradores.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.flpColaboradores.Location = new System.Drawing.Point(6, 50);
+            this.flpColaboradores.Name = "flpColaboradores";
+            this.flpColaboradores.Size = new System.Drawing.Size(466, 276);
+            this.flpColaboradores.TabIndex = 0;
+            // 
+            // IdentifyLog
+            // 
+            this.IdentifyLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.IdentifyLog.Location = new System.Drawing.Point(17, 398);
+            this.IdentifyLog.Name = "IdentifyLog";
+            this.IdentifyLog.Size = new System.Drawing.Size(613, 142);
+            this.IdentifyLog.TabIndex = 16;
+            this.IdentifyLog.Text = "";
+            this.IdentifyLog.TextChanged += new System.EventHandler(this.IdentifyLog_TextChanged);
+            // 
+            // groupBoxDispositivo
+            // 
+            this.groupBoxDispositivo.Controls.Add(this.label6);
+            this.groupBoxDispositivo.Controls.Add(this.label5);
+            this.groupBoxDispositivo.Controls.Add(this.enrollIDTextBox);
+            this.groupBoxDispositivo.Controls.Add(this.deleteAllBtn);
+            this.groupBoxDispositivo.Controls.Add(this.identifyTextBox);
+            this.groupBoxDispositivo.Controls.Add(this.IdentifyBtn);
+            this.groupBoxDispositivo.Controls.Add(this.enrollBtn);
+            this.groupBoxDispositivo.Controls.Add(this.readAllBtn);
+            this.groupBoxDispositivo.Controls.Add(this.label4);
+            this.groupBoxDispositivo.Controls.Add(this.iDsList);
+            this.groupBoxDispositivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxDispositivo.Location = new System.Drawing.Point(8, 6);
+            this.groupBoxDispositivo.Name = "groupBoxDispositivo";
+            this.groupBoxDispositivo.Size = new System.Drawing.Size(138, 386);
+            this.groupBoxDispositivo.TabIndex = 28;
+            this.groupBoxDispositivo.TabStop = false;
+            this.groupBoxDispositivo.Text = "Controle do Dispositivo";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label6.Location = new System.Drawing.Point(178, 198);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(3, 222);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 24);
+            this.label6.Size = new System.Drawing.Size(63, 15);
             this.label6.TabIndex = 26;
             this.label6.Text = "Identified:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label5.Location = new System.Drawing.Point(236, 50);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(3, 172);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 24);
+            this.label5.Size = new System.Drawing.Size(53, 15);
             this.label5.TabIndex = 25;
-            this.label5.Text = "ID:";
+            this.label5.Text = "Enroll ID:";
             // 
             // enrollIDTextBox
             // 
-            this.enrollIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.enrollIDTextBox.Location = new System.Drawing.Point(274, 47);
+            this.enrollIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enrollIDTextBox.Location = new System.Drawing.Point(6, 190);
             this.enrollIDTextBox.Name = "enrollIDTextBox";
-            this.enrollIDTextBox.Size = new System.Drawing.Size(130, 29);
+            this.enrollIDTextBox.Size = new System.Drawing.Size(60, 21);
             this.enrollIDTextBox.TabIndex = 24;
             // 
             // deleteAllBtn
             // 
-            this.deleteAllBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.deleteAllBtn.Location = new System.Drawing.Point(325, 331);
+            this.deleteAllBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteAllBtn.Location = new System.Drawing.Point(9, 344);
             this.deleteAllBtn.Name = "deleteAllBtn";
-            this.deleteAllBtn.Size = new System.Drawing.Size(130, 48);
+            this.deleteAllBtn.Size = new System.Drawing.Size(121, 36);
             this.deleteAllBtn.TabIndex = 23;
             this.deleteAllBtn.Text = "Delete All";
             this.deleteAllBtn.UseVisualStyleBackColor = true;
@@ -279,19 +460,19 @@
             // 
             // identifyTextBox
             // 
-            this.identifyTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.identifyTextBox.Location = new System.Drawing.Point(274, 195);
+            this.identifyTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.identifyTextBox.Location = new System.Drawing.Point(6, 240);
             this.identifyTextBox.Name = "identifyTextBox";
             this.identifyTextBox.ReadOnly = true;
-            this.identifyTextBox.Size = new System.Drawing.Size(130, 29);
+            this.identifyTextBox.Size = new System.Drawing.Size(124, 21);
             this.identifyTextBox.TabIndex = 22;
             // 
             // IdentifyBtn
             // 
-            this.IdentifyBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.IdentifyBtn.Location = new System.Drawing.Point(419, 186);
+            this.IdentifyBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IdentifyBtn.Location = new System.Drawing.Point(72, 267);
             this.IdentifyBtn.Name = "IdentifyBtn";
-            this.IdentifyBtn.Size = new System.Drawing.Size(130, 48);
+            this.IdentifyBtn.Size = new System.Drawing.Size(58, 36);
             this.IdentifyBtn.TabIndex = 21;
             this.IdentifyBtn.Text = "Identify";
             this.IdentifyBtn.UseVisualStyleBackColor = true;
@@ -299,10 +480,10 @@
             // 
             // enrollBtn
             // 
-            this.enrollBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.enrollBtn.Location = new System.Drawing.Point(419, 38);
+            this.enrollBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enrollBtn.Location = new System.Drawing.Point(72, 180);
             this.enrollBtn.Name = "enrollBtn";
-            this.enrollBtn.Size = new System.Drawing.Size(130, 48);
+            this.enrollBtn.Size = new System.Drawing.Size(58, 36);
             this.enrollBtn.TabIndex = 20;
             this.enrollBtn.Text = "Enroll";
             this.enrollBtn.UseVisualStyleBackColor = true;
@@ -310,10 +491,10 @@
             // 
             // readAllBtn
             // 
-            this.readAllBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.readAllBtn.Location = new System.Drawing.Point(17, 331);
+            this.readAllBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.readAllBtn.Location = new System.Drawing.Point(9, 302);
             this.readAllBtn.Name = "readAllBtn";
-            this.readAllBtn.Size = new System.Drawing.Size(130, 48);
+            this.readAllBtn.Size = new System.Drawing.Size(121, 36);
             this.readAllBtn.TabIndex = 19;
             this.readAllBtn.Text = "Read IDs";
             this.readAllBtn.UseVisualStyleBackColor = true;
@@ -322,31 +503,23 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label4.Location = new System.Drawing.Point(65, 11);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(6, 23);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 24);
+            this.label4.Size = new System.Drawing.Size(27, 15);
             this.label4.TabIndex = 18;
             this.label4.Text = "IDs";
             // 
             // iDsList
             // 
-            this.iDsList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.iDsList.Location = new System.Drawing.Point(48, 38);
+            this.iDsList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iDsList.HideSelection = false;
+            this.iDsList.Location = new System.Drawing.Point(9, 41);
             this.iDsList.Name = "iDsList";
-            this.iDsList.Size = new System.Drawing.Size(74, 281);
+            this.iDsList.Size = new System.Drawing.Size(121, 126);
             this.iDsList.TabIndex = 17;
             this.iDsList.UseCompatibleStateImageBehavior = false;
-            // 
-            // IdentifyLog
-            // 
-            this.IdentifyLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.IdentifyLog.Location = new System.Drawing.Point(17, 394);
-            this.IdentifyLog.Name = "IdentifyLog";
-            this.IdentifyLog.Size = new System.Drawing.Size(601, 142);
-            this.IdentifyLog.TabIndex = 16;
-            this.IdentifyLog.Text = "";
-            this.IdentifyLog.TextChanged += new System.EventHandler(this.IdentifyLog_TextChanged);
+            this.iDsList.View = System.Windows.Forms.View.List;
             // 
             // tabPage3
             // 
@@ -483,14 +656,22 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Example";
             this.Text = "iDBio Example";
+            // 
+            // *** CORREÇÃO DO ERRO CS0029 / CS0123 ***
+            //
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CaptureExample_FormClosed);
             this.Load += new System.EventHandler(this.Example_Load);
             this.tabControl1.ResumeLayout(false);
+            this.tabPageLogin.ResumeLayout(false);
+            this.tabPageLogin.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fingerImage)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.groupBoxCadastro.ResumeLayout(false);
+            this.groupBoxCadastro.PerformLayout();
+            this.groupBoxDispositivo.ResumeLayout(false);
+            this.groupBoxDispositivo.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.minVarTrack)).EndInit();
@@ -537,6 +718,19 @@
         private System.Windows.Forms.CheckBox chkBuzzer;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnConfigDefault;
+        private System.Windows.Forms.TabPage tabPageLogin;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblLoginStatus;
+        private System.Windows.Forms.GroupBox groupBoxCadastro;
+        private System.Windows.Forms.Button btnCadastrarApi;
+        private System.Windows.Forms.Button btnCarregarLista;
+        private System.Windows.Forms.TextBox txtFiltroNome;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.FlowLayoutPanel flpColaboradores;
+        private System.Windows.Forms.GroupBox groupBoxDispositivo;
     }
 }
-
